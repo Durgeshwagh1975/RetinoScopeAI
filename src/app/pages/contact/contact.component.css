@@ -1,0 +1,142 @@
+/* ===== CONTACT COMPONENT STYLES ===== */
+
+.contact-page {
+  padding-top: 1rem;
+}
+
+/* ===== INFO CARDS ===== */
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateX(10px);
+  border-color: var(--primary-color);
+}
+
+.info-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 14px;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.25);
+}
+
+.info-content h5 {
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+/* Social Section */
+.social-section {
+  padding: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+/* ===== CONTACT FORM ===== */
+.contact-form-card {
+  padding: 2.5rem;
+}
+
+.form-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.input-group-custom {
+  position: relative;
+}
+
+.input-group-custom i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 1rem;
+  z-index: 1;
+}
+
+.input-group-custom .form-control-glass {
+  padding-left: 45px;
+  width: 100%;
+}
+
+.textarea {
+  resize: none;
+  min-height: 140px;
+}
+
+/* ===== FAQ SECTION ===== */
+.faq-section .accordion-item {
+  border: none;
+  background: transparent;
+}
+
+.faq-section .accordion-button {
+  background: transparent;
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 1.25rem 1.5rem;
+  box-shadow: none;
+  border-radius: 16px !important;
+}
+
+.faq-section .accordion-button::after {
+  filter: invert(1) brightness(2);
+}
+
+.faq-section .accordion-button:not(.collapsed) {
+  background: var(--bg-card-hover);
+  color: var(--primary-color);
+}
+
+.faq-section .accordion-button:focus {
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+
+.faq-section .accordion-body {
+  padding: 0 1.5rem 1.5rem;
+}
+
+.faq-section .accordion-collapse {
+  background: transparent;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .contact-form-card {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-form-card {
+    padding: 1.5rem;
+  }
+  
+  .info-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}

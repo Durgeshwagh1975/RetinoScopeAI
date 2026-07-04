@@ -1,0 +1,332 @@
+/* ===== ABOUT US COMPONENT STYLES ===== */
+
+.about-page {
+  padding-top: 1rem;
+}
+
+/* ===== HERO SECTION ===== */
+.about-hero {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+/* About Graphic */
+.about-graphic {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.floating-card {
+  position: absolute;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  box-shadow: var(--shadow-card);
+}
+
+.floating-card i {
+  font-size: 1.5rem;
+}
+
+.card-1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-2 {
+  bottom: 20%;
+  left: 0;
+}
+
+.card-3 {
+  bottom: 20%;
+  right: 0;
+}
+
+.center-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 60px rgba(0, 212, 255, 0.4);
+}
+
+.logo-icon {
+  font-size: 3rem;
+}
+
+/* ===== OCT SECTION ===== */
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.feature-list li i {
+  font-size: 1.1rem;
+}
+
+.stats-mini {
+  display: flex;
+  gap: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item .number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+}
+
+.stat-item .label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ===== TECH SECTION ===== */
+.tech-card {
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+}
+
+.tech-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+}
+
+/* ===== ACCORDION ===== */
+.accordion-item-custom {
+  padding: 0;
+  overflow: hidden;
+}
+
+.accordion-header-custom {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordion-header-custom:hover {
+  background: var(--bg-card-hover);
+}
+
+.disease-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: white;
+}
+
+.disease-badge.cnv {
+  background: linear-gradient(135deg, #ff4757, #ff6b81);
+}
+
+.disease-badge.dme {
+  background: linear-gradient(135deg, #ffa502, #ff7f50);
+}
+
+.disease-badge.drusen {
+  background: linear-gradient(135deg, #00d4ff, #7c3aed);
+}
+
+.disease-badge.normal {
+  background: linear-gradient(135deg, #06ffa5, #00d4ff);
+}
+
+.disease-title {
+  flex: 1;
+}
+
+.disease-title h5 {
+  color: var(--text-primary);
+}
+
+.toggle-icon {
+  color: var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.accordion-header-custom[aria-expanded="true"] .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-body-custom {
+  padding: 0 1.5rem 1.5rem 5.5rem;
+  color: var(--text-secondary);
+}
+
+.severity-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.severity-indicator.danger {
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+}
+
+.severity-indicator.danger .value {
+  color: #ff4757;
+}
+
+.severity-indicator.warning {
+  background: rgba(255, 165, 2, 0.1);
+  border: 1px solid rgba(255, 165, 2, 0.3);
+}
+
+.severity-indicator.warning .value {
+  color: #ffa502;
+}
+
+.severity-indicator.info {
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.severity-indicator.info .value {
+  color: var(--primary-color);
+}
+
+.severity-indicator.success {
+  background: rgba(6, 255, 165, 0.1);
+  border: 1px solid rgba(6, 255, 165, 0.3);
+}
+
+.severity-indicator.success .value {
+  color: var(--accent-color);
+}
+
+.severity-indicator .label {
+  color: var(--text-muted);
+}
+
+.severity-indicator .value {
+  font-weight: 600;
+}
+
+/* ===== TEAM SECTION ===== */
+.team-card {
+  padding: 2.5rem;
+}
+
+.team-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 4rem;
+  color: white;
+  box-shadow: 0 10px 40px rgba(0, 212, 255, 0.3);
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-card {
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+  border: 1px solid var(--primary-color);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+  .about-graphic {
+    width: 280px;
+    height: 280px;
+    margin-top: 2rem;
+  }
+  
+  .floating-card {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .center-logo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .logo-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-graphic {
+    display: none;
+  }
+  
+  .stats-mini {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .accordion-body-custom {
+    padding-left: 1.5rem;
+  }
+}

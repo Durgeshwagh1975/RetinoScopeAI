@@ -1,0 +1,94 @@
+<!-- ===== SIGN IN PAGE ===== -->
+<div class="auth-page">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-7">
+        <div class="auth-card glass-card animate-scaleIn">
+          <!-- Header -->
+          <div class="auth-header text-center mb-4">
+            <div class="auth-logo mb-3">
+              <span class="logo-icon">👁️</span>
+            </div>
+            <h2 class="gradient-text">Welcome Back</h2>
+            <p class="text-secondary">Sign in to access RetinoScopeAI</p>
+          </div>
+          
+          <!-- Form -->
+          <form #regForm="ngForm" (ngSubmit)="onSubmit()">
+            <!-- Email -->
+            <div class="form-group mb-3">
+              <label class="form-label">Email Address</label>
+              <div class="input-wrapper">
+                <i class="bi bi-envelope"></i>
+                <input 
+                  type="email" 
+                  class="form-control-glass" 
+                  name="email" 
+                  [(ngModel)]="user.email" 
+                  required 
+                  placeholder="Enter your email">
+              </div>
+            </div>
+            
+            <!-- Password -->
+            <div class="form-group mb-4">
+              <label class="form-label">Password</label>
+              <div class="input-wrapper">
+                <i class="bi bi-lock"></i>
+                <input 
+                  type="password" 
+                  class="form-control-glass" 
+                  name="password" 
+                  [(ngModel)]="user.password" 
+                  required 
+                  placeholder="Enter your password">
+              </div>
+            </div>
+            
+            <!-- Remember & Forgot -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="remember">
+                <label class="form-check-label text-secondary" for="remember">Remember me</label>
+              </div>
+              <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+            
+            <!-- Submit -->
+            <button type="submit" class="btn btn-glow w-100 mb-3" [disabled]="regForm.invalid">
+              <i class="bi bi-box-arrow-in-right me-2"></i> Sign In
+            </button>
+          </form>
+          
+          <!-- Divider -->
+          <div class="divider">
+            <span>or continue with</span>
+          </div>
+          
+          <!-- Social Login -->
+          <div class="social-login">
+            <button class="social-btn">
+              <i class="bi bi-google"></i>
+            </button>
+            <button class="social-btn">
+              <i class="bi bi-github"></i>
+            </button>
+            <button class="social-btn">
+              <i class="bi bi-linkedin"></i>
+            </button>
+          </div>
+          
+          <!-- Footer -->
+          <div class="auth-footer text-center mt-4">
+            <p class="text-secondary mb-0">
+              Don't have an account? 
+              <a routerLink="/sign-up" class="signup-link">Sign Up</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

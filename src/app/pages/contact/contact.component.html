@@ -1,0 +1,226 @@
+<!-- ===== CONTACT PAGE ===== -->
+<div class="contact-page">
+  <div class="container py-5">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-8 text-center animate-fadeInUp">
+        <span class="badge-glow mb-3">📧 Get in Touch</span>
+        <h1 class="display-5 fw-bold mb-3">
+          <span class="gradient-text">Contact</span> Us
+        </h1>
+        <p class="text-secondary">
+          Have questions about RetinoScopeAI? We'd love to hear from you. 
+          Send us a message and we'll respond as soon as possible.
+        </p>
+      </div>
+    </div>
+    
+    <div class="row g-4">
+      <!-- Contact Info Cards -->
+      <div class="col-lg-5 animate-slideInLeft">
+        <div class="contact-info">
+          <!-- Email Card -->
+          <div class="info-card glass-card mb-4">
+            <div class="info-icon">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <div class="info-content">
+              <h5>Email Us</h5>
+              <p class="text-secondary mb-0">info&#64;retinoscope.ai</p>
+              <small class="text-muted">We reply within 24 hours</small>
+            </div>
+          </div>
+          
+          <!-- Phone Card -->
+          <div class="info-card glass-card mb-4">
+            <div class="info-icon">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="info-content">
+              <h5>Call Us</h5>
+              <p class="text-secondary mb-0">+91 98765 43210</p>
+              <small class="text-muted">Mon-Fri, 9am-6pm IST</small>
+            </div>
+          </div>
+          
+          <!-- Location Card -->
+          <div class="info-card glass-card mb-4">
+            <div class="info-icon">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="info-content">
+              <h5>Location</h5>
+              <p class="text-secondary mb-0">India</p>
+              <small class="text-muted">Available worldwide</small>
+            </div>
+          </div>
+          
+          <!-- Social Links -->
+          <div class="social-section glass-card">
+            <h5 class="mb-3">Follow Us</h5>
+            <div class="social-links">
+              <a href="#" class="social-icon"><i class="bi bi-github"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="col-lg-7 animate-slideInRight">
+        <div class="glass-card contact-form-card">
+          <h4 class="mb-4"><i class="bi bi-send me-2 text-primary"></i>Send a Message</h4>
+          
+          <form #formRef="ngForm" (ngSubmit)="onSubmit()">
+            <div class="row g-3">
+              <!-- Name -->
+              <div class="col-md-6">
+                <label class="form-label">Your Name</label>
+                <div class="input-group-custom">
+                  <i class="bi bi-person"></i>
+                  <input 
+                    type="text" 
+                    class="form-control-glass" 
+                    name="name"
+                    [(ngModel)]="user.name" 
+                    placeholder="John Doe" 
+                    required>
+                </div>
+              </div>
+              
+              <!-- Email -->
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <div class="input-group-custom">
+                  <i class="bi bi-envelope"></i>
+                  <input 
+                    type="email" 
+                    class="form-control-glass" 
+                    name="email"
+                    [(ngModel)]="user.email" 
+                    placeholder="john@example.com" 
+                    required>
+                </div>
+              </div>
+              
+              <!-- Subject -->
+              <div class="col-12">
+                <label class="form-label">Subject</label>
+                <div class="input-group-custom">
+                  <i class="bi bi-chat-left-text"></i>
+                  <input 
+                    type="text" 
+                    class="form-control-glass" 
+                    name="subject"
+                    [(ngModel)]="user.subject" 
+                    placeholder="How can we help?">
+                </div>
+              </div>
+              
+              <!-- Message -->
+              <div class="col-12">
+                <label class="form-label">Message</label>
+                <textarea 
+                  class="form-control-glass textarea" 
+                  name="message"
+                  [(ngModel)]="user.message" 
+                  rows="5" 
+                  placeholder="Tell us more about your inquiry..."
+                  required></textarea>
+              </div>
+              
+              <!-- Submit Button -->
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-glow w-100" [disabled]="formRef.invalid">
+                  <i class="bi bi-send me-2"></i> Send Message
+                </button>
+              </div>
+            </div>
+          </form>
+          
+          <!-- Success Alert (hidden by default) -->
+          <div class="alert-glass alert-glass-success mt-4" *ngIf="messageSent" style="display: block;">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            Message sent successfully! We'll get back to you soon.
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section mt-5 pt-5">
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-8 text-center">
+          <h2 class="section-title">
+            Frequently Asked <span class="gradient-text">Questions</span>
+          </h2>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item glass-card mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                  What types of OCT images can I upload?
+                </button>
+              </h2>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  You can upload retinal OCT images in PNG, JPG, or JPEG format. The images should be 
+                  clear and show the cross-sectional view of the retina for best results.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item glass-card mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                  How accurate is the AI diagnosis?
+                </button>
+              </h2>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Our AI model has been trained on over 100,000 OCT images and achieves approximately 
+                  99% accuracy on test datasets. However, this is meant as a screening tool and should 
+                  not replace professional medical diagnosis.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item glass-card mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                  Is my medical data secure?
+                </button>
+              </h2>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  Yes, we take privacy seriously. Uploaded images are processed locally and are not 
+                  stored permanently. We do not share any data with third parties.
+                </div>
+              </div>
+            </div>
+            
+            <div class="accordion-item glass-card mb-3">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                  Can I use this for clinical diagnosis?
+                </button>
+              </h2>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body text-secondary">
+                  This tool is designed for educational and screening purposes. While it provides 
+                  accurate predictions, it should be used alongside professional medical consultation 
+                  for clinical decisions.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

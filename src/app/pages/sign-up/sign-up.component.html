@@ -1,0 +1,152 @@
+<!-- ===== SIGN UP PAGE ===== -->
+<div class="auth-page">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-7">
+        <div class="auth-card glass-card animate-scaleIn">
+          <!-- Header -->
+          <div class="auth-header text-center mb-4">
+            <div class="auth-logo mb-3">
+              <span class="logo-icon">👁️</span>
+            </div>
+            <h2 class="gradient-text">Create Account</h2>
+            <p class="text-secondary">Join RetinoScopeAI today</p>
+          </div>
+          
+          <!-- Form -->
+          <form #regForm="ngForm" (ngSubmit)="onSubmit()">
+            <!-- Name -->
+            <div class="form-group mb-3">
+              <label class="form-label">Full Name</label>
+              <div class="input-wrapper">
+                <i class="bi bi-person"></i>
+                <input 
+                  type="text" 
+                  class="form-control-glass" 
+                  name="name" 
+                  [(ngModel)]="user.name" 
+                  required 
+                  placeholder="Enter your full name">
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="form-group mb-3">
+              <label class="form-label">Email Address</label>
+              <div class="input-wrapper">
+                <i class="bi bi-envelope"></i>
+                <input 
+                  type="email" 
+                  class="form-control-glass" 
+                  name="email" 
+                  [(ngModel)]="user.email" 
+                  required 
+                  placeholder="Enter your email">
+              </div>
+            </div>
+            
+            <!-- Password -->
+            <div class="form-group mb-3">
+              <label class="form-label">Password</label>
+              <div class="input-wrapper">
+                <i class="bi bi-lock"></i>
+                <input 
+                  type="password" 
+                  class="form-control-glass" 
+                  name="password" 
+                  [(ngModel)]="user.password" 
+                  required 
+                  placeholder="Create a password">
+              </div>
+            </div>
+            
+            <!-- Gender -->
+            <div class="form-group mb-3">
+              <label class="form-label">Gender</label>
+              <div class="gender-options">
+                <label class="gender-option">
+                  <input type="radio" name="gender" value="Male" [(ngModel)]="user.gender">
+                  <span class="option-box">
+                    <i class="bi bi-gender-male"></i> Male
+                  </span>
+                </label>
+                <label class="gender-option">
+                  <input type="radio" name="gender" value="Female" [(ngModel)]="user.gender">
+                  <span class="option-box">
+                    <i class="bi bi-gender-female"></i> Female
+                  </span>
+                </label>
+                <label class="gender-option">
+                  <input type="radio" name="gender" value="Other" [(ngModel)]="user.gender">
+                  <span class="option-box">
+                    <i class="bi bi-gender-ambiguous"></i> Other
+                  </span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Country -->
+            <div class="form-group mb-4">
+              <label class="form-label">Country</label>
+              <div class="input-wrapper">
+                <i class="bi bi-globe"></i>
+                <select class="form-control-glass" name="country" [(ngModel)]="user.country">
+                  <option value="">Select Country</option>
+                  <option value="India">India</option>
+                  <option value="USA">USA</option>
+                  <option value="UK">UK</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Terms -->
+            <div class="form-check mb-4">
+              <input type="checkbox" class="form-check-input" id="terms" required>
+              <label class="form-check-label text-secondary" for="terms">
+                I agree to the <a href="#" class="terms-link">Terms of Service</a> and 
+                <a href="#" class="terms-link">Privacy Policy</a>
+              </label>
+            </div>
+            
+            <!-- Submit -->
+            <button type="submit" class="btn btn-glow w-100 mb-3">
+              <i class="bi bi-person-plus me-2"></i> Create Account
+            </button>
+          </form>
+          
+          <!-- Divider -->
+          <div class="divider">
+            <span>or sign up with</span>
+          </div>
+          
+          <!-- Social Login -->
+          <div class="social-login">
+            <button class="social-btn">
+              <i class="bi bi-google"></i>
+            </button>
+            <button class="social-btn">
+              <i class="bi bi-github"></i>
+            </button>
+            <button class="social-btn">
+              <i class="bi bi-linkedin"></i>
+            </button>
+          </div>
+          
+          <!-- Footer -->
+          <div class="auth-footer text-center mt-4">
+            <p class="text-secondary mb-0">
+              Already have an account? 
+              <a routerLink="/sign-in" class="signup-link">Sign In</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
